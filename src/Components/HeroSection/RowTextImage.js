@@ -2,9 +2,8 @@ import React from "react";
 import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import burger from "../Assets/images/hero_hamburger.png";
 
-const RowTextImage = ({ headerText, secondaryText }) => {
+const RowTextImage = ({ headerText, secondaryText, image }) => {
   return (
     <Row className="align-items-center">
       <Col xs={6}>
@@ -12,7 +11,7 @@ const RowTextImage = ({ headerText, secondaryText }) => {
         <p className="text-hero-secondary">{secondaryText}</p>
       </Col>
       <Col>
-        <Image src={burger} fluid />
+        <Image src={image} fluid />
       </Col>
     </Row>
   );

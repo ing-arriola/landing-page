@@ -1,6 +1,5 @@
 import React from "react";
 import RowImageText from "./RowImageText";
-import Container from "react-bootstrap/Container";
 import "bootstrap/dist/css/bootstrap.min.css";
 import about from "../Assets/images/about_picture.png";
 const AboutSection = () => {
