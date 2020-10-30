@@ -128,3 +128,23 @@ body {
   width: 567px;
   height: 446.26px;
 }
+
+.restaurantes {
+  margin-top: 80px;
+  margin-bottom: 48.44px;
+  margin-left: 50px;
+}
+
+.first > a {
+  background: #000;
+  color: #fff;
+}
+
+.searchName {
+  width: 676px;
+}
+
+.leaflet-container {
+  width: 524px;
+  height: 609px;
+}
