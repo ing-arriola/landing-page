@@ -1,3 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
 @font-face {
   font-family: "Druk Text Wide";
   src: url("./Assets/Fonts/Druk/Font/DrukTextWide-BoldItalic.ttf")
@@ -67,12 +75,6 @@
   font-display: swap;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: "Druk Text Wide" !important;
 }
@@ -100,7 +102,7 @@ body {
 .text-hero {
   font-style: "normal";
   font-weight: "bold";
-  font-size: 60px;
+
   font-size: clamp(35px, 4.5vw, 60px);
   line-height: 60px;
   color: #000;
@@ -108,15 +110,21 @@ body {
   height: 180px;
 }
 
+.text-hero-secondary {
+  font-family: "Open Sans", sans-serif;
+  color: rgba(0, 0, 0, 0.4);
+}
+
 .container-text-hero {
   margin-left: 102px;
   margin-top: 185px;
+  width: 579px;
 }
 
 .burger-hero {
   margin-right: 94px;
   margin-left: 100px;
   margin-top: 80px;
-  width: clamp(35px, 40vw, 567px);
-  height: clamp(35px, 30vw, 446.26px);
+  width: 567px;
+  height: 446.26px;
 }
