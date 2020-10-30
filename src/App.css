@@ -1,3 +1,82 @@
+@font-face {
+  font-family: "Druk Text Wide";
+  src: url("./Assets/Fonts/Druk/Font/DrukTextWide-BoldItalic.ttf")
+    format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Druk Text Wide Super";
+  src: url("./Assets/Fonts/Druk/Font/DrukTextWide-SuperItalic.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Druk Text Wide";
+  src: url("./Assets/Fonts/Druk/Font/DrukTextWide-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Druk Text Wide";
+  src: url("./Assets/Fonts/Druk/Font/DrukTextWide-HeavyItalic.ttf")
+    format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Druk Text Wide";
+  src: url("./Assets/Fonts/Druk/Font/DrukTextWide-MediumItalic.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Druk Text Wide";
+  src: url("./Assets/Fonts/Druk/Font/DrukTextWide-Medium.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Druk Text Wide";
+  src: url("./Assets/Fonts/Druk/Font/DrukTextWide-Heavy.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Druk Text Wide Super";
+  src: url("./Assets/Fonts/Druk/Font/DrukTextWide-Super.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Druk Text Wide" !important;
+}
+
 .navbar {
   margin-left: 85px;
 }
@@ -5,6 +84,8 @@
 .navbar-logo {
   margin-top: 57px;
   font-size: 27px;
+
+  font-weight: 700;
 }
 
 .navbar-items {
@@ -12,19 +93,30 @@
   font-size: 18px;
 }
 
+.container-hero {
+  display: flex;
+}
+
 .text-hero {
+  font-style: "normal";
+  font-weight: "bold";
   font-size: 60px;
+  font-size: clamp(35px, 4.5vw, 60px);
+  line-height: 60px;
+  color: #000;
+
+  height: 180px;
 }
 
 .container-text-hero {
-  width: 579px;
-  height: 180px;
   margin-left: 102px;
+  margin-top: 185px;
 }
 
 .burger-hero {
   margin-right: 94px;
-  margin-left: 158px;
-  width: 567px;
-  height: 446.26px;
+  margin-left: 100px;
+  margin-top: 80px;
+  width: clamp(35px, 40vw, 567px);
+  height: clamp(35px, 30vw, 446.26px);
 }

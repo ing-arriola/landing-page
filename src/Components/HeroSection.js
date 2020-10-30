@@ -8,21 +8,17 @@ const HeroSection = () => {
     <div>
       <NavigationBar></NavigationBar>
 
-      <Media>
-        <Media.Body className="align-self-center container-text-hero">
+      <div className="container-hero">
+        <div className="container-text-hero">
           <p className="text-hero">Un nuevo sabor esta en la ciudad</p>
-          <p>
+          <p className="text-hero-secondary">
             Estamos a punto de descubrir un mundo lleno de sabores y de
             emociones inigualables.
           </p>
-        </Media.Body>
+        </div>
 
-        <img
-          className="align-self-center burger-hero"
-          src={burger}
-          alt="Generic placeholder"
-        />
-      </Media>
+        <img className=" burger-hero" src={burger} alt="Generic placeholder" />
+      </div>
     </div>
   );
 };
