@@ -1,5 +1,6 @@
 import React from "react";
 import { Map, TileLayer } from "react-leaflet";
+import Markers from "./Markers";
 import "leaflet/dist/leaflet.css";
 
 const MapView = () => {
@@ -9,6 +10,7 @@ const MapView = () => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       />
+      <Markers />
     </Map>
   );
 };
