@@ -144,7 +144,31 @@ body {
   width: 676px;
 }
 
+.map-container {
+  height: 824px;
+}
+
 .leaflet-container {
-  width: 524px;
-  height: 609px;
+  width: 100%;
+  height: 100%;
+}
+
+.testimonial {
+  position: relative;
+}
+
+.testimonial-title {
+  font-size: 35px;
+  text-align: center;
+  font-style: "normal";
+}
+
+.testimonial-rightsvg {
+  position: absolute;
+  right: 0;
+  bottom: -29rem;
+}
+
+.bringfront {
+  z-index: 1;
 }

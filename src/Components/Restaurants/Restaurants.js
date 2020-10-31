@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import MapView from "./MapView";
 import Row from "react-bootstrap/Row";
-import { Tab, Tabs, Form, Col } from "react-bootstrap";
+import TabData from "./TabData";
+import { Tab, Tabs, Form, Col, Container } from "react-bootstrap";
 
 const Restaurants = () => {
   const [items, setItems] = useState({});
   const [delivery, setDelivery] = useState({});
   const [filterItems, setFilterItems] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+
   const [key, setKey] = useState("takeaway");
 
   useEffect(() => {
@@ -30,10 +31,10 @@ const Restaurants = () => {
       locationToSearch = e.target.value;
       if (key === "takeaway") {
         const nearestLocation = items.data.filter((location) =>
-          location.name.toLowerCase().includes(locationToSearch.toLowerCase())
+          location.address
+            .toLowerCase()
+            .includes(locationToSearch.toLowerCase())
         );
-
-        console.log(nearestLocation);
         setFilterItems(nearestLocation);
       } else {
         const nearestLocation = delivery.data.filter((location) =>
@@ -47,35 +48,38 @@ const Restaurants = () => {
   };
 
   return (
-    <div className="restaurantes">
-      <Row>
-        <Col>
-          <h2>Estamos para ti</h2>
-          <Tabs
-            className="first"
-            defaultActiveKey="profile"
-            activeKey={key}
-            onSelect={(k) => setKey(k)}
-          >
-            <Tab eventKey="takeaway" title="Para llevar"></Tab>
-            <Tab eventKey="delivery" title="Domicilio"></Tab>
-          </Tabs>
+    <section className="restaurantes">
+      <Container fluid>
+        <Row>
+          <Col>
+            <h2>Estamos para ti</h2>
+            <Tabs
+              className="first"
+              defaultActiveKey="profile"
+              activeKey={key}
+              onSelect={(k) => setKey(k)}
+            >
+              <Tab eventKey="takeaway" title="Para llevar"></Tab>
+              <Tab eventKey="delivery" title="Domicilio"></Tab>
+            </Tabs>
 
-          <Form.Group className="searchName">
-            <Form.Control
-              onChange={changerImputHandler}
-              size="sm"
-              type="text"
-              placeholder="Small text"
-            />
-          </Form.Group>
-        </Col>
+            <Form.Group>
+              <Form.Control
+                onChange={changerImputHandler}
+                size="sm"
+                type="text"
+                placeholder="Small text"
+              />
+            </Form.Group>
+            <TabData itemsToShow={filterItems} />
+          </Col>
 
-        <Col>
-          <MapView locations={filterItems} />
-        </Col>
-      </Row>
-    </div>
+          <Col className="map-container">
+            <MapView locations={filterItems} />
+          </Col>
+        </Row>
+      </Container>
+    </section>
   );
 };
 export default Restaurants;
