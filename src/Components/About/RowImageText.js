@@ -6,7 +6,7 @@ import { Container } from "react-bootstrap";
 
 const RowTextImage = ({ title, secondaryText, image, text1, text2 }) => {
   return (
-    <Container fluid="lg">
+    <div>
       <Row className="align-items-center">
         <Col className="text-5xl bringfront relative-element" lg>
           <Image src={image} fluid />
@@ -20,7 +20,7 @@ const RowTextImage = ({ title, secondaryText, image, text1, text2 }) => {
           <p className="mr-5">{secondaryText}</p>
         </Col>
       </Row>
-    </Container>
+    </div>
   );
 };
 

@@ -1,21 +1,23 @@
 import React from "react";
 import "./sass/App.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
-import HeroSection from "./Components/HeroSection/HeroSection";
-import AboutSection from "./Components/About/AboutSection";
-import Restaurants from "./Components/Restaurants/Restaurants";
-import Testimonials from "./Components/Testimonials/Testimonials";
-import Contactus from "./Components/ContacUs/ContactUs";
-import BenefitApp from "./Components/BenefitApp/BenefitApp";
+import { Route, Switch, BrowserRouter } from "react-router-dom";
+import Home from "./pages/Home";
+import Menu from "./pages/Menu";
+import Layout from "./Components/Hoc/Layout";
+
 function App() {
+  let routes = (
+    <BrowserRouter>
+      <Switch>
+        <Route path="/menu" component={Menu} />
+        <Route path="/" component={Home} />
+      </Switch>
+    </BrowserRouter>
+  );
   return (
     <div className="App">
-      <HeroSection></HeroSection>
-      <AboutSection />
-      <Restaurants />
-      <Testimonials />
-      <Contactus />
-      <BenefitApp />
+      <Layout>{routes}</Layout>
     </div>
   );
 }

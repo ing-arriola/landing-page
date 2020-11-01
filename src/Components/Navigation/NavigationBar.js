@@ -7,13 +7,13 @@ const NavigationBar = () => {
   return (
     <div>
       <Navbar className="navbar" variant="light">
-        <Navbar.Brand className="navbar-logo" href="#home">
+        <Navbar.Brand className="navbar-logo" href="/">
           Foodies
         </Navbar.Brand>
         <Nav className="mr-auto navbar-items ">
           <Nav.Link href="#features">Acerca de</Nav.Link>
           <Nav.Link href="#Restaurantes">Restaurantes</Nav.Link>
-          <Nav.Link href="#Menú">Menú</Nav.Link>
+          <Nav.Link href="/menu">Menú</Nav.Link>
           <Nav.Link href="#Contáctanos">Contáctanos</Nav.Link>
         </Nav>
       </Navbar>
