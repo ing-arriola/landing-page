@@ -7,16 +7,16 @@ const Testimonials = () => {
   return (
     <div>
       <Container fluid>
-        <Row className="align-items-center">
+        <Row>
           <Col>
             <img src={left} />
           </Col>
-          <Col className="text-4xl" xs={6}>
+          <Col className="text-4xl align-center " xs={6}>
             “El mejor lugar para degustar en familia y amigos!”
           </Col>
           <Col>
-            <img className="testimonial-rightsvg bringfront " src={ketchup} />
-            <img className="testimonial-rightsvg" src={right} />
+            <img className="bringfront absolute-element" src={ketchup} />
+            <img className="absolute-element right-0 " src={right} />
           </Col>
         </Row>
       </Container>

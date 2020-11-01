@@ -8,7 +8,7 @@ const RowTextImage = ({ title, secondaryText, image, text1, text2 }) => {
     <Row className="align-items-center">
       <Col className="text-5xl bringfront relative-element">
         <Image src={image} fluid />
-        <div className="absolute-element paragraph-container ">
+        <div className="absolute-element right-20 paragraph-container ">
           <p className="white-text">{text1}</p>
           <p className="yellow-text">{text2}</p>
         </div>

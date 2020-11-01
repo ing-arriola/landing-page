@@ -48,8 +48,8 @@ const Restaurants = () => {
   };
 
   return (
-    <section className="restaurantes">
-      <Container fluid className="mb-2">
+    <section className="restaurantes mb-4">
+      <Container fluid>
         <Row>
           <Col>
             <h2>Estamos para ti</h2>

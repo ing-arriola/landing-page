@@ -129,7 +129,6 @@ body {
 
 .restaurantes {
   margin-top: 80px;
-  margin-bottom: 48.44px;
   margin-left: 50px;
 }
 
@@ -157,14 +156,15 @@ body {
 
 .absolute-element {
   position: absolute;
+}
+
+.right-20 {
   bottom: 0;
   right: 20px;
 }
 
-.absolute-element-right {
-  position: absolute;
+.right-0 {
   right: 0;
-  top: -200px;
 }
 
 .paragraph-container {
@@ -186,14 +186,13 @@ body {
   font-style: "normal";
 }
 
-.text-5xl {
-  font-size: 3rem;
+.align-center {
+  display: flex;
+  align-items: center;
 }
 
-.testimonial-rightsvg {
-  position: absolute;
-  right: 0;
-  bottom: -20rem;
+.text-5xl {
+  font-size: 3rem;
 }
 
 .bringfront {
