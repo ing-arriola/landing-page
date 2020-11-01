@@ -14,9 +14,9 @@ const Testimonials = () => {
           <Col className="text-4xl align-center " xs={6}>
             “El mejor lugar para degustar en familia y amigos!”
           </Col>
-          <Col>
+          <Col className="relative-element">
             <img className="bringfront absolute-element" src={ketchup} />
-            <img className="absolute-element right-0 " src={right} />
+            <img className="absolute-element right-0  " src={right} />
           </Col>
         </Row>
       </Container>

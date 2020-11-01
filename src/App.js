@@ -1,5 +1,6 @@
 import React from "react";
-import "./App.scss";
+import "./sass/App.scss";
+import "bootstrap/dist/css/bootstrap.min.css";
 import HeroSection from "./Components/HeroSection/HeroSection";
 import AboutSection from "./Components/About/AboutSection";
 import Restaurants from "./Components/Restaurants/Restaurants";

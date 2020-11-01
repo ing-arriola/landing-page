@@ -51,7 +51,7 @@ const Restaurants = () => {
     <section className="restaurantes mb-4">
       <Container fluid>
         <Row>
-          <Col>
+          <Col lg>
             <h2>Estamos para ti</h2>
             <Tabs
               className="first"
@@ -74,7 +74,7 @@ const Restaurants = () => {
             <TabData itemsToShow={filterItems} />
           </Col>
 
-          <Col className="map-container">
+          <Col className="map-container" lg>
             <MapView locations={filterItems} />
           </Col>
         </Row>

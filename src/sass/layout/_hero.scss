@@ -1,0 +1,15 @@
+.text-hero {
+  font-style: "normal";
+  font-weight: "bold";
+
+  font-size: clamp(35px, 4.5vw, 60px);
+  /*font-size: 3.75rem;*/
+  line-height: 60px;
+  color: #000;
+  margin-bottom: 21px;
+  height: 180px;
+}
+
+.text-hero-secondary {
+  color: rgba(0, 0, 0, 0.4);
+}

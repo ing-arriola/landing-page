@@ -10,7 +10,7 @@ const RowTextImage = ({ headerText, secondaryText, image, background }) => {
         <p className="text-hero" fluid>
           {headerText}
         </p>
-        <p className="text-hero-secondary">{secondaryText}</p>
+        <p className="text-hero-secondary open-sans">{secondaryText}</p>
       </Col>
       <Col className="mr-5">
         <Image className="mr-5 ml-5" src={image} fluid />

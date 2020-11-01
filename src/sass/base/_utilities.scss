@@ -1,0 +1,54 @@
+.right-0 {
+  right: 0;
+}
+
+.relative-element {
+  position: relative;
+  overflow: hidden;
+}
+
+.absolute-element {
+  position: absolute;
+}
+
+.end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+.bringfront {
+  z-index: 1;
+}
+
+.fullHeight {
+  height: 100%;
+}
+
+.text-2xl {
+  font-size: $text-2xl;
+  text-align: center;
+  font-style: "normal";
+}
+
+.text-4xl {
+  font-size: $text-2xl;
+  text-align: center;
+  font-style: "normal";
+}
+
+.text-5xl {
+  font-size: $text-5xl;
+}
+
+.yellow-text {
+  color: #ffc700;
+}
+
+.white-text {
+  color: $color-white;
+}
