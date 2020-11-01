@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+$color-white: #fff;
+
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
 
 @font-face {
@@ -86,7 +88,6 @@ body {
 .navbar-logo {
   margin-top: 57px;
   font-size: 27px;
-
   font-weight: 700;
 }
 
@@ -95,18 +96,15 @@ body {
   font-size: 18px;
 }
 
-.container-hero {
-  display: flex;
-}
-
 .text-hero {
   font-style: "normal";
   font-weight: "bold";
 
   font-size: clamp(35px, 4.5vw, 60px);
+  /*font-size: 3.75rem;*/
   line-height: 60px;
   color: #000;
-
+  margin-bottom: 21px;
   height: 180px;
 }
 
@@ -137,7 +135,7 @@ body {
 
 .nav-item.nav-link.active {
   background: #000 !important ;
-  color: #fff !important ;
+  color: $color-white !important ;
 }
 
 .searchName {
@@ -153,22 +151,58 @@ body {
   height: 100%;
 }
 
-.testimonial {
+.relative-element {
   position: relative;
 }
 
-.testimonial-title {
-  font-size: 35px;
+.absolute-element {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+}
+
+.absolute-element-right {
+  position: absolute;
+  right: 0;
+  top: -200px;
+}
+
+.paragraph-container {
+  width: 38rem;
+  text-align: right;
+}
+
+.yellow-text {
+  color: #ffc700;
+}
+
+.white-text {
+  color: $color-white;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
   text-align: center;
   font-style: "normal";
+}
+
+.text-5xl {
+  font-size: 3rem;
 }
 
 .testimonial-rightsvg {
   position: absolute;
   right: 0;
-  bottom: -29rem;
+  bottom: -20rem;
 }
 
 .bringfront {
   z-index: 1;
+}
+
+.contactus-container {
+  color: $color-white;
+  background: #000;
+  width: 100%;
+  padding: 7rem 0;
 }

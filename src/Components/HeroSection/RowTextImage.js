@@ -3,15 +3,17 @@ import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-const RowTextImage = ({ headerText, secondaryText, image }) => {
+const RowTextImage = ({ headerText, secondaryText, image, background }) => {
   return (
-    <Row className="align-items-center">
-      <Col xs={6}>
-        <p className="text-hero">{headerText}</p>
+    <Row className="align-items-center ml-5 ">
+      <Col xs={6} className="ml-5 mr-5 ">
+        <p className="text-hero" fluid>
+          {headerText}
+        </p>
         <p className="text-hero-secondary">{secondaryText}</p>
       </Col>
-      <Col>
-        <Image src={image} fluid />
+      <Col className="mr-5">
+        <Image className="mr-5 ml-5" src={image} fluid />
       </Col>
     </Row>
   );

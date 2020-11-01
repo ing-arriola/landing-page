@@ -49,7 +49,7 @@ const Restaurants = () => {
 
   return (
     <section className="restaurantes">
-      <Container fluid>
+      <Container fluid className="mb-2">
         <Row>
           <Col>
             <h2>Estamos para ti</h2>
@@ -68,7 +68,7 @@ const Restaurants = () => {
                 onChange={changerImputHandler}
                 size="sm"
                 type="text"
-                placeholder="Small text"
+                placeholder="Buscar por nombre o direccion"
               />
             </Form.Group>
             <TabData itemsToShow={filterItems} />

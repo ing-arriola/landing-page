@@ -11,7 +11,7 @@ const Testimonials = () => {
           <Col>
             <img src={left} />
           </Col>
-          <Col className="testimonial-title">
+          <Col className="text-4xl" xs={6}>
             “El mejor lugar para degustar en familia y amigos!”
           </Col>
           <Col>
