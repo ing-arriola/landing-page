@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Card } from "react-bootstrap";
+import Card from "react-bootstrap/Card";
 
 const MenuProducts = () => {
   const [categories, setCategories] = useState({});
@@ -19,16 +19,23 @@ const MenuProducts = () => {
       })
       .catch((error) => console.log(error));
   }, []);
+
   return (
-    <div>
+    <div className="cards-container">
       {!products.data ? (
         <p>cargando....</p>
       ) : (
         products.data.map((item) => (
-          <Card key={item.id} style={{ width: "38rem" }}>
+          <Card lg>
+            <Card.Img variant="top" src={item.image} />
+
             <Card.Body>
               <Card.Title>{item.name}</Card.Title>
+              <Card.Text>{item.description}</Card.Text>
             </Card.Body>
+            <Card.Footer>
+              <small className="text-muted">{item.price}</small>
+            </Card.Footer>
           </Card>
         ))
       )}

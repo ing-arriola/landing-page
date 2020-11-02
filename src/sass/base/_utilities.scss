@@ -2,6 +2,14 @@
   right: 0;
 }
 
+.top-0 {
+  top: 0;
+}
+
+.mb-large {
+  margin-bottom: 5rem;
+}
+
 .relative-element {
   position: relative;
   overflow: hidden;
@@ -29,6 +37,16 @@
   height: 100%;
 }
 
+.fullWidth {
+  width: 100%;
+}
+
+.text-lg {
+  font-size: $text-lg;
+  text-align: justify;
+  font-style: "normal";
+}
+
 .text-2xl {
   font-size: $text-2xl;
   text-align: center;
@@ -36,7 +54,7 @@
 }
 
 .text-4xl {
-  font-size: $text-2xl;
+  font-size: $text-4xl;
   text-align: center;
   font-style: "normal";
 }
@@ -51,4 +69,8 @@
 
 .white-text {
   color: $color-white;
+}
+
+.image-card {
+  width: 16rem;
 }

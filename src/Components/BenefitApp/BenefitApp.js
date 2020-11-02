@@ -7,10 +7,10 @@ const BenefitApp = () => {
     <div>
       <Container fluid>
         <Row>
-          <Col>
+          <Col fluid>
             <img src={AppImage} />
           </Col>
-          <Col>
+          <Col className="align-items-center" fluid>
             <p className="text-4xl">
               Obten más beneficios Descarga nuestra App
             </p>

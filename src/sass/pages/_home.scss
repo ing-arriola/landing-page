@@ -24,3 +24,9 @@
   border-color: #ffc700;
   color: #ffc700;
 }
+
+@media screen and (max-width: 992px) {
+  .about-description {
+    margin-top: 3.75rem;
+  }
+}
