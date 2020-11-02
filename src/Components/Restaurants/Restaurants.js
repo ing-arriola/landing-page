@@ -8,7 +8,6 @@ const Restaurants = () => {
   const [items, setItems] = useState({});
   const [delivery, setDelivery] = useState({});
   const [filterItems, setFilterItems] = useState([]);
-
   const [key, setKey] = useState("takeaway");
 
   useEffect(() => {
@@ -83,15 +82,3 @@ const Restaurants = () => {
   );
 };
 export default Restaurants;
-
-/*
-
-  {!filterItems ? (
-          <p>cargando....</p>
-        ) : (
-          <ul>
-            {filterItems.map((item) => (
-              <li key={item.name}>{item.name}</li>
-            ))}
-          </ul>
-        )}*/
