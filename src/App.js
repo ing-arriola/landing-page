@@ -7,18 +7,17 @@ import Menu from "./pages/Menu";
 import Layout from "./Components/Hoc/Layout";
 
 function App() {
-  let routes = (
-    <BrowserRouter>
-      <Switch>
-        <Route path="/menu" component={Menu} />
-        <Route path="/" component={Home} />
-      </Switch>
-    </BrowserRouter>
-  );
   return (
-    <div className="App">
-      <Layout>{routes}</Layout>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Layout>
+          <Switch>
+            <Route path="/menu" component={Menu} />
+            <Route path="/" component={Home} />
+          </Switch>
+        </Layout>
+      </div>
+    </BrowserRouter>
   );
 }
 
