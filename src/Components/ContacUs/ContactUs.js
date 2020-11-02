@@ -49,6 +49,7 @@ const ContactUs = () => {
   return (
     <div className="contactus-container">
       <p className="text-4xl">Cuentanos tu experiencia</p>
+
       <p className="text-2xl open-sans ">
         Don't miss out on our great offers &amp; Receive deals from all our top
         restaurants via e-mail.

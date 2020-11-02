@@ -2,16 +2,16 @@ import React, { useEffect, useState } from "react";
 import Card from "react-bootstrap/Card";
 
 const MenuProducts = () => {
-  const [categories, setCategories] = useState({});
+  /*const [categories, setCategories] = useState({});*/
   const [products, setProducts] = useState({});
 
   useEffect(() => {
-    fetch("https://api.elaniin.dev/api/categories")
+    /*fetch("https://api.elaniin.dev/api/categories")
       .then((res) => res.json())
       .then((result) => {
         setCategories(result);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => console.log(error));*/
     fetch("https://api.elaniin.dev/api/menu")
       .then((res) => res.json())
       .then((result) => {

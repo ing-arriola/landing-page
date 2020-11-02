@@ -1,7 +1,7 @@
 import React from "react";
 import RowImageText from "./RowImageText";
 import about from "../../Assets/images/About/about_picture.svg";
-import Container from "react-bootstrap/Container";
+
 const AboutSection = () => {
   return (
     <RowImageText
