@@ -1,23 +1,24 @@
 import React from "react";
+import { Route, Switch, BrowserRouter } from "react-router-dom";
 import "./sass/App.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Route, Switch, BrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import Menu from "./pages/Menu";
 import Layout from "./Components/Hoc/Layout";
 
 function App() {
-  return (
+  let routes = (
     <BrowserRouter>
-      <div className="App">
-        <Layout>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/menu" component={Menu} />
-          </Switch>
-        </Layout>
-      </div>
+      <Switch>
+        <Route path="/menu" component={Menu} />
+        <Route path="/" component={Home} />
+      </Switch>
     </BrowserRouter>
+  );
+  return (
+    <div className="App">
+      <Layout>{routes}</Layout>
+    </div>
   );
 }
 
