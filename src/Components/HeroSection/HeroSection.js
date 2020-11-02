@@ -8,7 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const HeroSection = () => {
   return (
     <div className="mb-large">
-      <Container className="pr-5 " fluid sm>
+      <Container className="pr-5 " fluid>
         <RowTextImage
           headerText="Un nuevo sabor esta en la ciudad"
           secondaryText="Estamos a punto de descubrir un mundo lleno de sabores y de emociones

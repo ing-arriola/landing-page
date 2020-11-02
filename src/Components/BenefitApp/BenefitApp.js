@@ -1,16 +1,21 @@
 import React from "react";
 import AppImage from "../../Assets/images/Benefit/app.svg";
 
-import { Row, Tabs, Form, Col, Container } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+
 const BenefitApp = () => {
   return (
     <div>
       <Container fluid>
         <Row>
           <Col fluid>
-            <img src={AppImage} />
+            <LazyLoadImage alt="AppImage" effect="blur" src={AppImage} />
           </Col>
-          <Col className="align-items-center" fluid>
+          <Col className="align-items-center">
             <p className="text-4xl">
               Obten más beneficios Descarga nuestra App
             </p>

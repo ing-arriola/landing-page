@@ -12,3 +12,9 @@
   margin-top: 60px;
   font-size: 18px;
 }
+
+@media screen and (max-width: 992px) {
+  .navbar {
+    display: none;
+  }
+}

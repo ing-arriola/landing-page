@@ -1,5 +1,11 @@
 /*ABOUT*/
 
+.about-title {
+  animation-name: moveInLeft;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in;
+}
+
 .right-20 {
   bottom: 0;
   right: 20px;
