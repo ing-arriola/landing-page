@@ -2,6 +2,7 @@ import React from "react";
 
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
+import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const NavigationBar = () => {
@@ -14,8 +15,8 @@ const NavigationBar = () => {
         <Nav className="mr-auto navbar-items ">
           <Nav.Link href="#features">Acerca de</Nav.Link>
           <Nav.Link href="#Restaurantes">Restaurantes</Nav.Link>
+          <Link to="/menu">Menú</Link>
 
-          <Nav.Link href="/menu">Menú</Nav.Link>
           <Nav.Link href="#Contáctanos">Contáctanos</Nav.Link>
         </Nav>
       </Navbar>

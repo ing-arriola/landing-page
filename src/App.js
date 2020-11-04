@@ -9,14 +9,14 @@ import Layout from "./Components/Hoc/Layout";
 function App() {
   return (
     <div className="App">
-      <Layout>
-        <Router>
+      <Router>
+        <Layout>
           <Switch>
             <Route path="/menu" component={Menu} />
             <Route path="/" component={Home} />
           </Switch>
-        </Router>
-      </Layout>
+        </Layout>
+      </Router>
     </div>
   );
 }
