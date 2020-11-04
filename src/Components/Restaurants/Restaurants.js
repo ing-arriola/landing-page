@@ -1,42 +1,45 @@
 import React, { useState, useEffect } from "react";
-import MapView from "./MapView";
+import axios from "axios";
+import { Tab, Tabs, Form, Col, Container } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import TabData from "./TabData";
-import { Tab, Tabs, Form, Col, Container } from "react-bootstrap";
+import MapView from "./MapView";
 
 const Restaurants = () => {
-  const [items, setItems] = useState({});
-  const [delivery, setDelivery] = useState({});
+  const [items, setItems] = useState([]);
+  const [delivery, setDelivery] = useState([]);
   const [filterItems, setFilterItems] = useState([]);
   const [key, setKey] = useState("takeaway");
 
+  const getLocations = async (type) => {
+    const response = await axios.get("https://api.elaniin.dev/api/locations", {
+      params: { type: type },
+    });
+    type === "takeaway"
+      ? setItems(response.data.data)
+      : setDelivery(response.data.data);
+  };
+
   useEffect(() => {
-    fetch("https://api.elaniin.dev/api/locations?type=takeaway")
-      .then((res) => res.json())
-      .then((result) => {
-        setItems(result);
-      });
-    fetch("https://api.elaniin.dev/api/locations?type=delivery")
-      .then((res) => res.json())
-      .then((result) => {
-        setDelivery(result);
-      });
+    getLocations("takeaway");
+    getLocations("delivery");
   }, []);
 
   const changerImputHandler = (e) => {
     let locationToSearch;
+
     //when e.target.value is empty all the locations are retrieved from state
     if (e.target.value !== "") {
       locationToSearch = e.target.value;
       if (key === "takeaway") {
-        const nearestLocation = items.data.filter((location) =>
+        const nearestLocation = items.filter((location) =>
           location.address
             .toLowerCase()
             .includes(locationToSearch.toLowerCase())
         );
         setFilterItems(nearestLocation);
       } else {
-        const nearestLocation = delivery.data.filter((location) =>
+        const nearestLocation = delivery.filter((location) =>
           location.address
             .toLowerCase()
             .includes(locationToSearch.toLowerCase())
