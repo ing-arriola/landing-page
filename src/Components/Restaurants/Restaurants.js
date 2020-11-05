@@ -32,17 +32,21 @@ const Restaurants = () => {
     if (e.target.value !== "") {
       locationToSearch = e.target.value;
       if (key === "takeaway") {
-        const nearestLocation = items.filter((location) =>
-          location.address
-            .toLowerCase()
-            .includes(locationToSearch.toLowerCase())
+        const nearestLocation = items.filter(
+          (location) =>
+            location.address
+              .toLowerCase()
+              .includes(locationToSearch.toLowerCase()) ||
+            location.name.toLowerCase().includes(locationToSearch.toLowerCase())
         );
         setFilterItems(nearestLocation);
       } else {
-        const nearestLocation = delivery.filter((location) =>
-          location.address
-            .toLowerCase()
-            .includes(locationToSearch.toLowerCase())
+        const nearestLocation = delivery.filter(
+          (location) =>
+            location.address
+              .toLowerCase()
+              .includes(locationToSearch.toLowerCase()) ||
+            location.name.toLowerCase().includes(locationToSearch.toLowerCase())
         );
         setFilterItems(nearestLocation);
       }
